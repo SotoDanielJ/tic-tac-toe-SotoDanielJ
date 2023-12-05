@@ -5,7 +5,7 @@
     "react-scripts": "^5.0.0"
   },
   "main": "/index.js",
-  "devDependencies": {},
+  "devDependencies": "@babel/plugin-proposal-private-property-in-object",
   "name": "mxyk82",
   "description": null,
   "version": "0.0.2",
