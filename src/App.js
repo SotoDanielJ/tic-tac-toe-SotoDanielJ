@@ -8,6 +8,14 @@ function Square({ value, onSquareClick }) {
   );
 }
 
+function SquareX({ value, onSquareClick }) {
+  return (
+    <button className="square" onClick={onSquareClick}>
+      {value}
+    </button>
+  );
+}
+
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
@@ -15,7 +23,7 @@ function Board({ xIsNext, squares, onPlay }) {
     }
     const nextSquares = squares.slice();
     if (xIsNext) {
-      nextSquares[i] = "X";
+      nextSquares[i] = "X"; 
     } else {
       nextSquares[i] = "O";
     }
@@ -77,7 +85,7 @@ export default function Game() {
     }
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button className="info-btn" onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
